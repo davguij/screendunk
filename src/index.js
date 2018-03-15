@@ -1,7 +1,7 @@
 const fastify = require('fastify')();
 const screenshot = require('./screenshots');
 
-fastify.get('/api/v1/status', (request, reply) => {
+fastify.get('/status', (request, reply) => {
   reply.send({ status: 'All good!' });
 });
 
