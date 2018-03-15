@@ -1,14 +1,13 @@
 {
-  "name": "titiritero",
+  "name": "screenslam",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "node ./src",
     "dev": "nodemon ./src"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "David Guijarro<guijarro.dav@mgail.com>",
+  "license": "MIT",
   "dependencies": {
     "fastify": "^1.1.1",
     "puppeteer": "^1.1.1"
