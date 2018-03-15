@@ -1,0 +1,23 @@
+{
+  "name": "titiritero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src",
+    "dev": "nodemon ./src"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^1.1.1",
+    "puppeteer": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^1.1.0",
+    "nodemon": "^1.17.2"
+  },
+  "engines": {
+    "node": "~8.10.0"
+  }
+}
