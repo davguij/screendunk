@@ -1,7 +1,9 @@
 const fastify = require('fastify')();
+const devices = require('puppeteer/DeviceDescriptors');
 
 const validator = require('./validator');
 const screenshot = require('./screenshoter');
+const deviceSchema = require('./device-schema');
 
 fastify.get('/status', (request, reply) => {
   reply.send({ status: 'All good!' });
@@ -35,6 +37,10 @@ fastify.get(
     }
   }
 );
+
+fastify.get('/devices', deviceSchema, (request, reply) => {
+  reply.send(devices);
+});
 
 fastify.listen(process.env.PORT || 3001, '0.0.0.0', err => {
   if (err) throw err;
