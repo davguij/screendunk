@@ -3,7 +3,7 @@
 const puppeteer = require('puppeteer');
 const devices = require('puppeteer/DeviceDescriptors');
 
-module.exports = async (url, UA) => {
+module.exports = async (url, emulateSettings) => {
   try {
     const browser = await puppeteer.launch({
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -11,10 +11,7 @@ module.exports = async (url, UA) => {
     const page = await browser.newPage();
     // await page.emulate(devices['iPhone 6']);
     // 1280x800 by default
-    await page.emulate({
-      userAgent: UA,
-      viewport: { width: 1280, height: 800 },
-    });
+    await page.emulate(emulateSettings);
     await page.goto(url, {
       waitUntil: 'networkidle0',
     });
