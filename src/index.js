@@ -1,3 +1,5 @@
+require('make-promises-safe'); // installs an 'unhandledRejection' handler
+
 const fastify = require('fastify')();
 const devices = require('puppeteer/DeviceDescriptors');
 
